@@ -1,10 +1,10 @@
 import React from "react";
-import BookStore from "../container/BookStore";
+import BookList from "../container/BookList";
 
 const App = props => {
   return (
     <React.Fragment>
-      <BookStore />
+      <BookList />
     </React.Fragment>
   );
 };
