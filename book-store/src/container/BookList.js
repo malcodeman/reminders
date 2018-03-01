@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { selectBook } from "../actions";
 
 class BookList extends Component {
   render() {
@@ -7,7 +8,11 @@ class BookList extends Component {
       <div>
         <ul>
           {this.props.books.map((book, index) => {
-            return <li key={book.id}>{book.title}</li>;
+            return (
+              <li key={book.id} onClick={() => this.props.selectBook(book)}>
+                {book.title}
+              </li>
+            );
           })}
         </ul>
       </div>
@@ -21,4 +26,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(BookList);
+const mapDispatchToProps = dispatch => {
+  return {
+    selectBook: book => dispatch(selectBook(book))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
