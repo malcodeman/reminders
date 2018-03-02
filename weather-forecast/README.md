@@ -1,1 +1,1 @@
-# Weather forecase
+# Weather forecast
