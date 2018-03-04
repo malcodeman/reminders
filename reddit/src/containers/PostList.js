@@ -7,11 +7,16 @@ class PostList extends Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.props.posts.map((post, index) => {
-            return <li key={index}>{post.title}</li>;
-          })}
-        </ul>
+        {this.props.loading ? (
+          <p>Loading</p>
+        ) : (
+          <ul>
+            {this.props.posts.map((post, index) => {
+              return <li key={index}>{post.title}</li>;
+            })}
+          </ul>
+        )}
+
         <button onClick={this.props.requestPosts}>Fetch posts</button>
       </div>
     );
@@ -20,7 +25,8 @@ class PostList extends Component {
 
 const mapStateToProps = state => {
   return {
-    posts: state.posts.posts
+    posts: state.posts.posts,
+    loading: state.posts.loading
   };
 };
 

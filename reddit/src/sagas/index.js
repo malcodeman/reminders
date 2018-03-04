@@ -11,5 +11,5 @@ export function* watchfetchPosts() {
   yield takeLatest("REQUEST_POSTS", fetchPosts);
 }
 export default function* rootSaga() {
-  yield all([fetchPosts(), watchfetchPosts()]);
+  yield all([watchfetchPosts()]);
 }
