@@ -30,6 +30,18 @@ function App() {
     return Math.random();
   }
 
+  function toggleIsCompleted(id: number): any {
+    const newTodos = todos.map(todo => {
+      if (todo.id === id) {
+        todo.isCompleted
+          ? (todo.isCompleted = false)
+          : (todo.isCompleted = true);
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  }
+
   return (
     <div className={style.app}>
       <main className={style.main}>
@@ -45,7 +57,13 @@ function App() {
         <ul className={style.list}>
           {todos.map(todo => {
             return (
-              <li className={style.listItem} key={todo.id}>
+              <li
+                className={
+                  todo.isCompleted ? style.listItemCompleted : style.listItem
+                }
+                key={todo.id}
+                onClick={() => toggleIsCompleted(todo.id)}
+              >
                 {todo.value}
               </li>
             );

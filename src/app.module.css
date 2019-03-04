@@ -14,8 +14,8 @@
 }
 
 .input {
-  border: 1px solid transparent;
-  border-radius: 3px;
+  border: 0;
+  border-radius: 4px;
   background-color: #fff;
   font-size: 1rem;
   padding: 6px;
@@ -30,9 +30,21 @@
 }
 
 .listItem {
+  background-color: #fff;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.listItemCompleted {
   background-color: #5529dc;
   margin-bottom: 6px;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   padding: 6px;
