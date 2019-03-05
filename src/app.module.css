@@ -31,7 +31,12 @@
   padding: 0;
 }
 
-.plusBtn {
+.input::placeholder {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.plusSquareBtn {
   height: 32px;
   min-width: 32px;
   display: flex;
@@ -43,7 +48,7 @@
   cursor: pointer;
 }
 
-.plusIcon {
+.plusSquareIcon {
   height: 16px;
   width: 16px;
   background-color: #fff;
@@ -92,6 +97,46 @@
   color: #fff;
 }
 
+.xSquareBtn {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.xSquareBtnCompleted {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background-color: #5529dc;
+  cursor: pointer;
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.xSquareIcon {
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+}
+
+.xSquareIconCompleted {
+  height: 16px;
+  width: 16px;
+  color: #fff;
+}
+
 .listItem {
   background-color: #fff;
   margin-bottom: 6px;
@@ -100,7 +145,6 @@
   align-items: center;
   padding: 6px;
   font-size: 0.8rem;
-  cursor: pointer;
   width: 100%;
   overflow-wrap: anywhere;
 }
@@ -114,7 +158,6 @@
   padding: 6px;
   font-size: 0.8rem;
   color: #fff;
-  cursor: pointer;
   width: 100%;
   overflow-wrap: anywhere;
 }
