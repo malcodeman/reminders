@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 import style from "./app.module.css";
+import { ReactComponent as PlusIcon } from "./plus.svg";
+import { ReactComponent as SquareIcon } from "./square.svg";
+import { ReactComponent as CheckSquareIcon } from "./check-square.svg";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -45,7 +48,7 @@ function App() {
   return (
     <div className={style.app}>
       <main className={style.main}>
-        <form onSubmit={handleSubmit}>
+        <form className={style.form} onSubmit={handleSubmit}>
           <input
             className={style.input}
             type="text"
@@ -53,6 +56,9 @@ function App() {
             value={value}
             onChange={handleOnChange}
           />
+          <button className={style.plusBtn} onClick={handleSubmit}>
+            <PlusIcon className={style.plusIcon} />
+          </button>
         </form>
         <ul className={style.list}>
           {todos.map(todo => {
@@ -64,7 +70,16 @@ function App() {
                 key={todo.id}
                 onClick={() => toggleIsCompleted(todo.id)}
               >
-                {todo.value}
+                {todo.isCompleted ? (
+                  <button className={style.checkSquareBtn}>
+                    <CheckSquareIcon className={style.checkSquareIcon} />
+                  </button>
+                ) : (
+                  <button className={style.squareBtn}>
+                    <SquareIcon className={style.squareIcon} />
+                  </button>
+                )}
+                <span>{todo.value}</span>
               </li>
             );
           })}
