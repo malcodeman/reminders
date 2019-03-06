@@ -5,6 +5,7 @@ import { ReactComponent as PlusSquareIcon } from "./plus-square.svg";
 import { ReactComponent as SquareIcon } from "./square.svg";
 import { ReactComponent as CheckSquareIcon } from "./check-square.svg";
 import { ReactComponent as XSquareIcon } from "./x-square.svg";
+import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <div className={style.app}>
+      <Header />
       <main className={style.main}>
         <form className={style.form} onSubmit={handleSubmit}>
           <input
