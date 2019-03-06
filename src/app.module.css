@@ -1,13 +1,15 @@
 .app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: #020631;
   min-height: 100vh;
 }
 
 .main {
   width: 100%;
-  max-width: 376px;
+  max-width: 488px;
   display: flex;
   flex-direction: column;
   padding: 128px 24px 0 24px;
@@ -149,6 +151,10 @@
   overflow-wrap: anywhere;
 }
 
+.listItem:last-of-type {
+  margin-bottom: 0;
+}
+
 .listItemCompleted {
   background-color: #5529dc;
   margin-bottom: 6px;
@@ -160,4 +166,8 @@
   color: #fff;
   width: 100%;
   overflow-wrap: anywhere;
+}
+
+.listItemCompleted:last-of-type {
+  margin-bottom: 0;
 }

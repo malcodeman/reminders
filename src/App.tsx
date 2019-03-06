@@ -5,6 +5,7 @@ import { ReactComponent as PlusSquareIcon } from "./plus-square.svg";
 import { ReactComponent as SquareIcon } from "./square.svg";
 import { ReactComponent as CheckSquareIcon } from "./check-square.svg";
 import { ReactComponent as XSquareIcon } from "./x-square.svg";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -113,6 +114,7 @@ function App() {
           })}
         </ul>
       </main>
+      <Footer />
     </div>
   );
 }
