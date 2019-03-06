@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 import style from "./app.module.css";
-import { ReactComponent as PlusSquareIcon } from "./plus-square.svg";
 import { ReactComponent as SquareIcon } from "./square.svg";
 import { ReactComponent as CheckSquareIcon } from "./check-square.svg";
 import { ReactComponent as XSquareIcon } from "./x-square.svg";
 import Header from "./components/header/Header";
+import Form from "./components/form/Form";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -13,24 +13,6 @@ function App() {
     { id: generateId(), value: "Made by malcodeman", isCompleted: false },
     { id: generateId(), value: "Check it out in GitHub", isCompleted: false }
   ]);
-  const [value, setValue] = useState("");
-
-  function handleOnChange(e: any) {
-    setValue(e.target.value);
-  }
-
-  function handleSubmit(e: any) {
-    e.preventDefault();
-    if (value === "") {
-      return;
-    }
-    const newTodos = [
-      ...todos,
-      { id: generateId(), value, isCompleted: false }
-    ];
-    setTodos(newTodos);
-    setValue("");
-  }
 
   function generateId(): number {
     return Math.random();
@@ -48,6 +30,14 @@ function App() {
     setTodos(newTodos);
   }
 
+  const addTodo = (value: string) => {
+    const newTodos = [
+      ...todos,
+      { id: generateId(), value, isCompleted: false }
+    ];
+    setTodos(newTodos);
+  };
+
   function removeTodo(id: number): any {
     const newTodos = todos.filter(todo => todo.id !== id);
 
@@ -58,18 +48,7 @@ function App() {
     <div className={style.app}>
       <Header />
       <main className={style.main}>
-        <form className={style.form} onSubmit={handleSubmit}>
-          <input
-            className={style.input}
-            type="text"
-            placeholder="✍️ Add item..."
-            value={value}
-            onChange={handleOnChange}
-          />
-          <button className={style.plusSquareBtn} onClick={handleSubmit}>
-            <PlusSquareIcon className={style.plusSquareIcon} />
-          </button>
-        </form>
+        <Form addTodo={addTodo} />
         <ul className={style.list}>
           {todos.map(todo => {
             return (
