@@ -7,6 +7,7 @@ const Header = () => {
   function getDay(): string {
     return new Date().toLocaleDateString("en-us", { weekday: "long" });
   }
+
   return (
     <header className={style.header}>
       <Sputnik className={style.logo} />

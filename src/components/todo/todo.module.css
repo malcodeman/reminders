@@ -1,0 +1,109 @@
+.listItem {
+  background-color: #fff;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  font-size: 0.8rem;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.listItem:last-of-type {
+  margin-bottom: 0;
+}
+
+.listItemCompleted {
+  background-color: #5529dc;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  font-size: 0.8rem;
+  color: #fff;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.listItemCompleted:last-of-type {
+  margin-bottom: 0;
+}
+
+.squareBtn {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-start;
+  background-color: #fff;
+}
+
+.squareIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.checkSquareBtn {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-start;
+  background-color: #5529dc;
+}
+
+.checkSquareIcon {
+  height: 16px;
+  width: 16px;
+  color: #fff;
+}
+
+.xSquareBtn {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.xSquareIcon {
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+}
+
+.xSquareBtnCompleted {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background-color: #5529dc;
+  cursor: pointer;
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.xSquareIconCompleted {
+  height: 16px;
+  width: 16px;
+  color: #fff;
+}
