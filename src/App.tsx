@@ -51,6 +51,7 @@ function App() {
           {todos.map(todo => {
             return (
               <Todo
+                key={todo.id}
                 todo={todo}
                 toggleIsCompleted={toggleIsCompleted}
                 removeTodo={removeTodo}
