@@ -5,6 +5,8 @@
 
 React To-Do App with React Hooks.
 
+![Screenshot](docs/images/screenshot.png)
+
 ## Usage
 
 ```
