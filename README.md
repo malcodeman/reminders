@@ -26,6 +26,7 @@ If you wish to deploy to [surge.sh](https://surge.sh) just edit `domain` variabl
 
 - [Chris Sevilleja](https://github.com/sevilayha) for his excellent react hooks example [React To-Do with Hooks](https://codesandbox.io/s/oj3qm2zq06)
 - [Quentin Colus](https://twitter.com/Quentin_cls) for making [Todost](http://todost.quentincolus.com)
+- [Dale Humphries](https://twitter.com/dalehumphries) for making [space icon set freebie](https://tympanus.net/codrops/2016/03/18/freebie-astronomy-space-icons)
 - [Roboto font](https://fonts.google.com/specimen/Roboto)
 
 ## License
