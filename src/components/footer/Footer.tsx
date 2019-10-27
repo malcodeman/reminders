@@ -10,16 +10,19 @@ const Footer = () => {
         className={style.link}
         href="https://github.com/malcodeman"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
-        malcodeman 👩‍🚀
+        malcodeman{" "}
+        <span role="img" aria-label="astronaut">
+          👩‍🚀
+        </span>
       </a>{" "}
       -{" "}
       <a
         className={style.link}
         href="https://github.com/malcodeman/reminders"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         repo
       </a>
