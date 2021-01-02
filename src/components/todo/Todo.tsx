@@ -5,7 +5,7 @@ import { ReactComponent as SquareIcon } from "./icons/square.svg";
 import { ReactComponent as CheckSquareIcon } from "./icons/check-square.svg";
 import { ReactComponent as XSquareIcon } from "./icons/x-square.svg";
 
-interface Todo {
+interface TodoInterface {
   id: number;
   value: string;
   isCompleted: boolean;
@@ -14,7 +14,7 @@ interface Todo {
 interface Props {
   toggleIsCompleted: Function;
   removeTodo: Function;
-  todo: Todo;
+  todo: TodoInterface;
 }
 
 const Todo = (props: Props) => {
