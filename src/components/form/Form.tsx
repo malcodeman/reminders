@@ -10,7 +10,7 @@ interface Props {
 const Form = (props: Props) => {
   const [value, setValue] = useState("");
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (value) {
       props.addTodo(value);
@@ -18,7 +18,7 @@ const Form = (props: Props) => {
     }
   };
 
-  function handleOnChange(e: any) {
+  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
     setValue(e.target.value);
   }
 
@@ -31,7 +31,7 @@ const Form = (props: Props) => {
         value={value}
         onChange={handleOnChange}
       />
-      <button className={style.plusSquareBtn} onClick={handleSubmit}>
+      <button className={style.plusSquareBtn}>
         <PlusSquareIcon className={style.plusSquareIcon} />
       </button>
     </form>

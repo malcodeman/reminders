@@ -26,8 +26,8 @@ function App() {
         {
           id: generateId(),
           value: "Check it out in GitHub",
-          isCompleted: false
-        }
+          isCompleted: false,
+        },
       ];
 
       setTodos(firstRunTodos);
@@ -39,8 +39,8 @@ function App() {
     return Math.random();
   }
 
-  function toggleIsCompleted(id: number): any {
-    const newTodos = todos.map(todo => {
+  function toggleIsCompleted(id: number) {
+    const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isCompleted
           ? (todo.isCompleted = false)
@@ -60,15 +60,15 @@ function App() {
   const addTodo = (value: string) => {
     const newTodos = [
       ...todos,
-      { id: generateId(), value, isCompleted: false }
+      { id: generateId(), value, isCompleted: false },
     ];
 
     setTodos(newTodos);
     setTodosToLocalStorage(newTodos);
   };
 
-  function removeTodo(id: number): any {
-    const newTodos = todos.filter(todo => todo.id !== id);
+  function removeTodo(id: number) {
+    const newTodos = todos.filter((todo) => todo.id !== id);
 
     setTodos(newTodos);
     setTodosToLocalStorage(newTodos);
@@ -80,7 +80,7 @@ function App() {
       <main className={style.main}>
         <Form addTodo={addTodo} />
         <ul className={style.list}>
-          {todos.map(todo => {
+          {todos.map((todo) => {
             return (
               <Todo
                 key={todo.id}
