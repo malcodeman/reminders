@@ -2,7 +2,6 @@
   "name": "reminders",
   "version": "0.1.0",
   "private": true,
-  "domain": "reminders.surge.sh",
   "dependencies": {
     "@types/jest": "26.0.19",
     "@types/node": "14.14.19",
@@ -17,8 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "yarn build && surge build $npm_package_domain"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
